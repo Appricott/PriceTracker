@@ -7,28 +7,29 @@
 	$tbl_name="users"; // nume tabel
 
 // Conectare bd si selectare bd
-	mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-	mysql_select_db("$db_name")or die("cannot select DB");
+	$conn = new PDO("mysql:host=$host; dbname=$db_name", $username, $password); 
 
 // nume si parola trimise de pe form 
-	$myusername=$_POST['myusername']; 
-	$mypassword=$_POST['mypassword']; 
+	$username=$_POST['username']; 
+	$password=$_POST['password']; 
+	
 // Query
-	$sql="SELECT * FROM $tbl_name WHERE user='$myusername' and parola='$mypassword'";
-	$result=mysql_query($sql);
-
-// numar randuri din bd
-	$count=mysql_num_rows($result);
-
-// daca se gasesc potriviri pentru $myusername si $mypassword, rand tabel=1
-	if($count==1){
-
-// se registreaza $myusername, $mypassword si redirectioneaza catre"succes.php"
-	session_start("myusername");
-	session_start("mypassword"); 
-	header("location:succes.php");
-	}
-	else {
-	echo "Wrong Username or Password";
-	}
+	
+	$query = $conn->prepare("SELECT * FROM users WHERE user = ? AND parola =?");
+	$query->bindParam(1, $username); //schimba ? cu username
+	$query->bindParam(2, $password); //schimba ? cu parola
+	$query->execute();
+ 	$rows = $query->rowCount();
+	
+	
+		if($rows==1){
+			
+			session_start("username");
+			session_start("password"); 
+			header("location:succes.php");
+					}
+		else{
+			echo "Wrong Username or Password";
+		
+			}	
 ?>
