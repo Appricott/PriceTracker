@@ -29,7 +29,9 @@
 			header("location:succes.php");
 					}
 		else{
-			echo "Wrong Username or Password";
-		
+								
+			header("location:failed.php");
+			
+			
 			}	
 ?>
