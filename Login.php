@@ -1,4 +1,5 @@
 <html>
+
     <head>
         <meta charset="utf-8" />
         
@@ -9,7 +10,7 @@
     </head>
     
     <body>
-
+			
         <header>
             <h1>Price Tracker</h1>
             <h2><a href="index.php">Evaluarea produselor in functie de pret</a></h2>
@@ -21,7 +22,8 @@
                 <li><a href="#">Noutati</a></li>
                 <li><a href="#">Despre PriceTracker</a></li>
                 <li><a href="#">Servicii</a></li>
-                <li><a href="login.php">Alatura-te PriceTracker</a></li>
+                <li><a href="login.php">Login</a></li>
+				<li><a href="register.php">Register</a></li>
             </ul>
         </nav>
         
@@ -43,7 +45,7 @@
 						<tr>
 							<td>Parola</td>
 							<td>:</td>
-							<td><input name="password" type="text" id="password"></td>
+							<td><input name="password" type="password" id="password"></td>
 						</tr>
 						<tr>
 							<td>&nbsp</td>
@@ -59,4 +61,5 @@
         <footer><img src="img/Appricot.png"></footer>
             
     </body>
+	
 </html>
