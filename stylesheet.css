@@ -18,7 +18,7 @@ body{
 
 table{
 	margin-left:auto; 
-    	margin-right:auto;
+    margin-right:auto;
 	margin-top:20px;
 	
 	}
@@ -82,6 +82,11 @@ a, a:visited {
 a:hover{
 	text-decoration:underline;
 }
+
+#Unu{
+	font-family: Verdana;
+	color:red;
+	}
 
 
 
