@@ -21,7 +21,8 @@
                 <li><a href="#">Noutati</a></li>
                 <li><a href="#">Despre PriceTracker</a></li>
                 <li><a href="#">Servicii</a></li>
-                <li><a href="login.php">Alatura-te PriceTracker</a></li>
+                <li><a href="login.php">Login</a></li>
+				<li><a href="register.php">Register</a></li>
             </ul>
         </nav>
         
